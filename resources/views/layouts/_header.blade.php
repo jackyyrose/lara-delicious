@@ -4,7 +4,7 @@
         <ul class="navbar-nav justify-content-end">
 
             <li class="nav-item"><a class="nav-link" href="#">Sign In</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Sign Up</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{route('signup')}}">Sign Up</a></li>
             <li class="nav-item"><a class="nav-link" href="{{route('help')}}">Help</a></li>
         </ul>
     </div>
