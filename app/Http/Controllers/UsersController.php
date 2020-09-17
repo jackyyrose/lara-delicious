@@ -45,7 +45,7 @@ class UsersController extends Controller
         $this->validate($request, [
             'name' => 'required|max:50',
             //'email' => 'required|email|unique:users|max:255', #to be unique in table Users
-            'password' => 'required|confirmed|min:6'
+            'password' => 'nullable|confirmed|min:6'
         ]);
         $data = [];
         $data['name'] =  $request->name;
