@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Auth;
 
 class UsersController extends Controller
 {
@@ -30,6 +31,7 @@ class UsersController extends Controller
 
         ]);
 
+        Auth::login($user);
         session()->flash('success', 'Welcome, You will be loving here:)');
         return redirect()->route('users.show', [$user]);
     }
