@@ -20,8 +20,8 @@ class SessionsController extends Controller
             'password' => 'required'
         ]);
 
-        if (Auth::attempt($credentials)) {
-            session()->flash('success', 'Weclome back, how are you today?');
+        if (Auth::attempt($credentials, $request->has('remember'))) {
+            session()->flash('success', 'Welcome back, how are you today?');
             return redirect()->route('users.show', [Auth::user()]);
         } else {
             session()->flash('danger', 'Sorry, your Email and password doesn\'t match!');
