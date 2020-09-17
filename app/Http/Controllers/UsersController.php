@@ -35,4 +35,6 @@ class UsersController extends Controller
         session()->flash('success', 'Welcome, You will be loving here:)');
         return redirect()->route('users.show', [$user]);
     }
+
+
 }
