@@ -26,7 +26,7 @@
                 <li class="nav-item"><a class="nav-link" href="{{route('login')}}">Sign In</a></li>
             <li class="nav-item"><a class="nav-link" href="{{route('signup')}}">Sign Up</a></li>
             @endif
-            <li class="nav-item"><a class="nav-link" href="{{route('help')}}">Help</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{route('help')}}">Contact Us</a></li>
         </ul>
     </div>
 </nav>

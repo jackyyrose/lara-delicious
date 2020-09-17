@@ -1,5 +1,6 @@
 @extends('layouts/default')
-@section('title','Help')
+@section('title','Contact Us')
 @section('content')
-    <h1>Help</h1>
+    <h1>Address</h1>
+    <h1>Phone</h1>
 @stop
