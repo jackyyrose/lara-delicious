@@ -62,4 +62,9 @@ class User extends Authenticatable
             $user->activation_token = Str::random(30);
         });
     }
+
+    // to anounce that 1 user may have multi reviews
+    public function reviews(){
+        return $this->hasMany(Review::class);
+    }
 }
