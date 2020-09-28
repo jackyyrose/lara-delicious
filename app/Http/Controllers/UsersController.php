@@ -25,7 +25,8 @@ class UsersController extends Controller
 
     public function show(User $user)
     {
-        return view('users.show', compact('user'));
+        $reviews = $user->reviews()->orderBy('created_at','desc')->paginate(10);
+        return view('users.show', compact('user','reviews'));
     }
 
     public function store(Request $request)
@@ -112,6 +113,8 @@ class UsersController extends Controller
         session()->flash('success','Successfully activated.');
         return redirect()->route('users.show',[$user]);
     }
+
+
 
 
 }
