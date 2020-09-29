@@ -70,4 +70,9 @@ class User extends Authenticatable
     public function reviews(){
         return $this->hasMany(Review::class);
     }
+
+    // to produce the waterfull of an user's all reviews
+    public function feed(){
+        return $this->reviews()->orderBy('created_at','desc');
+    }
 }

@@ -7,7 +7,8 @@
             @include('shared._review_form')
         </section>
         <h4>Post List </h4>
-
+        <hr>
+        @include('shared._feed')
     </div>
     <aside class="col-md-4">
         <section class="user_info">
