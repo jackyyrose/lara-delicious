@@ -7,7 +7,7 @@
 @endforeach
 </ul>
 <div class="mt-5">
-    {{ $feed_items->list() }}
+    {{ $feed_items->links() }}
 </div>
 @else
 <p>No Reviews!</p>

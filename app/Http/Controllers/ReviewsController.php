@@ -24,4 +24,11 @@ class ReviewsController extends Controller
         session()->flash('success','Post successfully!');
         return redirect()->back();
     }
+
+    public function destroy(Review $review){
+        $this->authorize('destroy', $review);
+        $review->delete();
+        session()->flash('success','Review successfully deleted!');
+        return redirect()->back();
+    }
 }
