@@ -73,7 +73,10 @@ class User extends Authenticatable
 
     // to produce the waterfull of an user's all reviews
     public function feed(){
-        return $this->reviews()->orderBy('created_at','desc');
+        // return $this->reviews()->orderBy('created_at','desc');
+        $user_ids = $this->followings->pluck('id')->toArray();
+        array_push($user_ids, $this->id);
+        return Review::whereIn('user_id', $user_ids)->with('user')->orderBy('created_at','desc');
     }
 
     public function followers(){
