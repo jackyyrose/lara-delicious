@@ -96,7 +96,7 @@ class UsersController extends Controller
         $from = 'jack@example.com';
         $name = 'Jack';
         $to = $user->email;
-        $subject = "Thanks for registration in Delishows, please confirm your email address.";
+        $subject = "Thanks for registration in " . config('app.name') .  ", please confirm your email address.";
         Mail::send($view, $data, function ($message) use ($from, $name, $to, $subject) {
             $message->from($from, $name)->to($to)->subject($subject);
         });
