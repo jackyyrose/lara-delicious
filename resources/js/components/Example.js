@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Button } from '@material-ui/core';
 
 function Example() {
     return (
@@ -13,6 +14,7 @@ function Example() {
                     </div>
                 </div>
             </div>
+            <Button>MUI Button Here</Button>
         </div>
     );
 }
