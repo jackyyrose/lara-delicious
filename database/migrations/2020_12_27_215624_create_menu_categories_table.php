@@ -15,7 +15,7 @@ class CreateMenuCategoriesTable extends Migration
     {
         Schema::create('menu_categories', function (Blueprint $table) {
             $table->id();
-            $table->string('menu_category_name');
+            $table->string('category_name');
             $table->index(['created_at']);// to index the system default created_at field, to speed up sorting
             $table->timestamps();
         });

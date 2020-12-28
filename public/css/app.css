@@ -11005,3 +11005,8 @@ section.user_info h1 {
   color: black;
 }
 
+#carousel_demo .carousel-item > img {
+  width: 100%;
+  height: 600px;
+}
+

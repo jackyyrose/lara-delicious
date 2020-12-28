@@ -96,3 +96,10 @@ section.user_info {
       color: black;
     }
 }
+
+#carousel_demo{
+    .carousel-item > img {
+        width: 100%;
+        height: 600px;
+    }
+}
